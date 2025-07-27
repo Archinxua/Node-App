@@ -32,7 +32,7 @@ pipeline{
                         scp -o StrictHostKeyChecking=no -r dist/* ${REMOTE_USER}@${EC2_HOST}:${REMOTE_PATH}/
 
                         echo "Restarting nginx"
-                        ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${EC2_HOST}'
+                        ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${EC2_HOST} '
                         sudo rm -rf ${WEB_ROOT}/*
                         sudo cp -r ${REMOTE_PATH}/* ${WEB_ROOT}/
                         sudo systemctl restart ${SERVER}
