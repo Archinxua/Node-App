@@ -1,7 +1,7 @@
 pipeline{
     agent any 
 
-    envrionment{
+    environment{
         EC2_HOST = "13.203.105.66" // IP of ec2 we want to deploy ons
         SSH_CREDENTIAL_ID = "ec2-key" // .pem file content id
         REMOTE_USER = "ubuntu" // username of ec2 machine
